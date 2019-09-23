@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+#  failOnError: true
+#  keyStore:
+#    location: file://${HOME}/trendyol-case/config-server/keys/config-server.jks
+#    password: 12345678
+#    secret: mykeypass
+#    alias: defaultkey
+
+
+#encrypt:
+    ##  failOnError: true
+    ##  keyStore:
+    ##    location: file://${HOME}/Desktop/trendyol-case/trendyol-case-properties/config-server
+    ##    password: 1234567
+  ##    secret: mykeypass
+  ##    alias: defaultkey
