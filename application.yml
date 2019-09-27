@@ -51,7 +51,7 @@ spring:
     bus:
       enabled: true
     config:
-      uri: http://localhost:8888
+      uri: http://localhost:8089
   rabbitmq:
     host: localhost
     port: 5672
