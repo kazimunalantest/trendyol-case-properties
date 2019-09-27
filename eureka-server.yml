@@ -70,4 +70,8 @@ eureka:
 #    registerWithEureka: true
 #    fetchRegistry: false
 #    serviceUrl:
+<<<<<<< HEAD
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+=======
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+>>>>>>> parent of 4bde575... changed application and eureka config yml
