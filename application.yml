@@ -36,8 +36,8 @@ security:
   basic:
     enabled: false
   user:
-    name: mg
-    password: 123456
+    name: admin
+    password: nimda
 
 feign:
   hystrix:
@@ -51,7 +51,7 @@ spring:
     bus:
       enabled: true
     config:
-      uri: http://localhost:8089
+      uri: http://${general.eureka.server.hostname}:8888
   rabbitmq:
     host: localhost
     port: 5672
@@ -64,6 +64,8 @@ general:
       hostname: localhost
       port: 8761
 
+app:
+  id: ${random.uuid}
 
 mg:
   security:
