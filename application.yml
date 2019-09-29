@@ -1,3 +1,4 @@
+
 eureka:
   instance:
     preferIpAddress: true
@@ -36,8 +37,8 @@ security:
   basic:
     enabled: false
   user:
-    name: admin
-    password: nimda
+    name: mg
+    password: 123456
 
 feign:
   hystrix:
@@ -55,8 +56,8 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    username: rabbitmq
-    password: rabbitmq
+    username: mg
+    password: 123456
 
 general:
   eureka:
