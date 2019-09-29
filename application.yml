@@ -1,17 +1,29 @@
-
+---
 eureka:
   instance:
-    preferIpAddress: true
+    prefer-ip-address: true
+#    ip-address: ${server.address}
     leaseRenewalIntervalInSeconds: 2
     leaseExpirationDurationInSeconds: 6
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
   client:
-    healthcheck: enabled
-    register-with-eureka: true
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://${general.eureka.server.hostname}:${general.eureka.server.port}/eureka/
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  contex-path: /admin
+  security:
+    enabled: false
+    endpoint:
+      health:
+        show-details: always
+    endpoints:
+      web:
+        exposure:
+          include: hystrix.stream, bus-refresh
+        base-path: /
 
 # management:
 #   context-path: /admin
@@ -25,50 +37,47 @@ eureka:
 #     health:
 #       show-details: always﻿
 
-management:
+spring:
+  profiles:
+    active: local
   security:
-    enabled: false
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+    user:
+      name: ${EUREKA_USERNAME:admin}
+      password: ${EUREKA_PASSWORD:nimda}
+    basic:
+      enabled: false
+      path: /**
+#security:
+#  basic:
+#    enabled: false
+#  user:
+#    name: admin
+#    password: nimda
 
-security:
-  basic:
-    enabled: false
-  user:
-    name: admin
-    password: nimda
+---
+
+#spring:
+#  profiles: prod
+#  security:
+#    user:
+#      name: ${EUREKA_USERNAME:admin}
+#      password: ${EUREKA_PASSWORD:nimda}
+#    basic:
+#      enabled: true
+#      path: /**
 
 feign:
   hystrix:
-    enabled: enabled
+    enabled: false
 
 spring:
-  output:
-    ansi:
-      enabled: ALWAYS
-  cloud:
-    bus:
-      enabled: true
-    config:
-      uri: http://${general.eureka.server.hostname}:8888
   rabbitmq:
     host: localhost
     port: 5672
     username: rabbitmq
     password: rabbitmq
 
-general:
-  eureka:
-    server:
-      hostname: localhost
-      port: 8761
 
-app:
-  id: ${random.uuid}
-
-mg:
-  security:
-    jwt:
-      secret: secretkey
+#---
+#spring:
+#  profiles: test
