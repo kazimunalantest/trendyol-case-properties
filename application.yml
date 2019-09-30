@@ -10,7 +10,7 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://${general.eureka.server.hostname}:${general.eureka.server.port}/eureka/
 
 management:
   contex-path: /admin
