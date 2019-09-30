@@ -2,5 +2,5 @@ server:
   port: 9999
 
 turbine:
-  appConfig: catalog-service, payment-service
+  appConfig: frontend-server
   clusterNameExpression: new String('default')
