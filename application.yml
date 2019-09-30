@@ -1,5 +1,7 @@
 ---
 eureka:
+  registration:
+    enabled: true
   instance:
     prefer-ip-address: true
 #    ip-address: ${server.address}
