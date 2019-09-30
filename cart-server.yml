@@ -1,6 +1,6 @@
 ---
 server:
-  port: ${SERVER_PORT:8013}
+  port: ${SERVER_PORT:8012}
 
 multiplication:
   multipler: 10
