@@ -9,6 +9,7 @@ eureka:
   client:
     healthcheck: enabled
     register-with-eureka: true
+    fetch-registry: false
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://${general.eureka.server.hostname}:${general.eureka.server.port}/eureka/
