@@ -39,8 +39,8 @@ security:
     context-path: /**
     enabled: false
   user:
-    name: ${username: admin}
-    password: ${username: nimda}
+    name: ${username:admin}
+    password: ${password:nimda}
 
 feign:
   hystrix:
