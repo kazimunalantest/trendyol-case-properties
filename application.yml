@@ -67,8 +67,3 @@ general:
 
 app:
   id: ${random.uuid}
-
-mg:
-  security:
-    jwt:
-      secret: secretkey
