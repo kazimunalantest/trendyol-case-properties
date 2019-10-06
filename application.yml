@@ -28,7 +28,7 @@ eureka:
 
 management:
   security:
-    enabled: true
+    enabled: false
   endpoints:
     web:
       exposure:
@@ -37,7 +37,7 @@ management:
 security:
   basic:
     context-path: /**
-    enabled: true
+    enabled: false
   user:
     name: ${username:admin}
     password: ${password:nimda}
