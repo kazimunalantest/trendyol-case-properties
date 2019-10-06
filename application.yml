@@ -36,10 +36,11 @@ management:
 
 security:
   basic:
+    context-path: /**
     enabled: false
   user:
-    name: admin
-    password: nimda
+    name: ${username: admin}
+    password: ${username: nimda}
 
 feign:
   hystrix:
