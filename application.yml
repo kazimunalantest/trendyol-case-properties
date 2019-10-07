@@ -44,7 +44,7 @@ security:
 
 feign:
   hystrix:
-    enabled: enabled
+    enabled: false
 
 spring:
   output:
